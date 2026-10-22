@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jivanjot Edits</title>
+<meta name="description" content="Video editing portfolio: short form, long form and colour correction.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" id="brand" href="#home" data-route="home">Jivanjot</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home" data-route="home">HOME</a>
+      <a href="#edits" data-route="edits">EDITS</a>
+      <a href="#contact" data-route="contact">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section class="view" id="view-home" data-view="home" aria-label="Home">
+    <div class="hero">
+      <img class="hero-photo" id="hero-photo" src="assets/me.jpg" alt="" fetchpriority="high" decoding="async">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="wrap hero-stage" id="hero-stage">
+        <h1 class="hero-name" id="hero-name">Jivanjot</h1>
+        <svg class="arrows" id="arrows" aria-hidden="true" focusable="false"></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITS -->
+  <section class="view" id="view-edits" data-view="edits" aria-label="Edits" hidden>
+    <div class="wrap edits" id="edits-root"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="view" id="view-contact" data-view="contact" aria-label="Contact" hidden>
+    <div class="contact">
+      <a class="half wa" id="link-wa" href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+        <span class="half-name">WhatsApp</span>
+        <span class="half-sub">Tell me about your footage</span>
+      </a>
+      <a class="half ig" id="link-ig" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        <span class="half-name">Instagram</span>
+        <span class="half-sub">Send a DM or follow along</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- Owner tools: only appear after opening the site once with #owner in the address -->
+<div class="owner-bar" id="owner-bar" hidden>
+  <p class="owner-msg" id="owner-msg">Owner mode. Stars are saved in this browser only until you update data/videos.js.</p>
+  <div class="owner-actions">
+    <button type="button" id="owner-copy">Copy videos.js</button>
+    <button type="button" id="owner-reset">Reset stars</button>
+    <button type="button" id="owner-exit">Exit owner mode</button>
+  </div>
+  <textarea class="owner-out" id="owner-out" rows="6" readonly hidden aria-label="Updated videos.js"></textarea>
+</div>
+
+<script src="data/site.js"></script>
+<script src="data/videos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
